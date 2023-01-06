@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(77, 88, 138);
+}
+
+h1{
+    font-size: 20px;
+    font-weight: 20px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    color: aliceblue;
+}
+
+.box, form{
+   
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 250px;
+    height: 25px;
+    border-radius: 7px;
+    padding: 0 15px 0 15px;
+}
+
+button{
+    width: 150px;
+    height: 25px;
+    border-radius: 3px;
+    border: none;
+    
+}
+
+.texto-msg, p {
+    color: aliceblue;
+    margin: 30px 10px;
+    text-align: center;
+}
+
+ .area-cadastro{
+    gap: 1px;
+    display: inline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrada-saida{
+    margin: 30px;
+    padding: 10px;
+}
+
+
