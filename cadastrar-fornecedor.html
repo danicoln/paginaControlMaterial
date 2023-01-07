@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/fornecedor.js" defer></script>
 
     <title>Controle de Materiais</title>
 </head>
@@ -15,13 +16,15 @@
 <body>
    
     <div class="box">
-        <h1>Cadastro de Usuário</h1>
+        <h1>Cadastro de Fornecedor</h1>
         <form action="form">
             <input type="text" class="nome" placeholder="Nome">
-            <input type="text" class="email" placeholder="Email">
-            <input type="password" class="senha" placeholder="Senha">
-            <button>Cadastrar</button>
+            <input type="text" class="cnpj" placeholder="CNPJ">
         </form>
+        <div class="menu-cadastro-fornecedor">
+            <button class="cadastrar">Cadastrar</button>
+            <button class="voltar-menu"><a href="principal.html">Voltar ao Menu</a></button>
+        </div>
     </div>
 
     <div class="texto-msg">

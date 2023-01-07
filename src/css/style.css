@@ -26,12 +26,32 @@ input{
     padding: 0 15px 0 15px;
 }
 
-button{
-    width: 150px;
-    height: 25px;
+button {    
     border-radius: 3px;
     border: none;
-    
+    font-size: 20px;
+	font-weight: bold;
+	line-height: 19px;
+	line-height: 100%;
+	vertical-align: top;
+	width: 258px;
+	height: hug(67px);
+	border-radius: 24px;
+    margin: 10px;
+	padding: 30px;
+	gap: 15px;
+	color: #FFFFFF;
+	background: #0A3871;
+    text-align: center;
+    transition: 0.3s all;
+	cursor: pointer;
+
+}
+
+button:hover{
+    background: #29467E;
+	transform: scale(1.1);
+	color: #FFFFFF;
 }
 
 .texto-msg, p {
@@ -40,7 +60,7 @@ button{
     text-align: center;
 }
 
- .area-cadastro{
+ .area-cadastro, .area-saida{
     gap: 1px;
     display: inline;
     flex-direction: column;
@@ -55,9 +75,24 @@ button{
     align-items: center;
 }
 
-.entrada-saida{
+.entrada-saida, .buttons{
     margin: 30px;
     padding: 10px;
 }
 
+.buttons{
+   
+    display: flex;
+   
+}
 
+a{
+    text-decoration: none;
+    color: aliceblue;
+    
+}
+
+.menu-cadastro-material{
+    display: flex;
+    justify-content: center;
+}

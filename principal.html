@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/script.js" defer></script>
+
+    <title>Menu Principal</title>
+</head>
+
+<body>
+
+    
+   
+    <div class="menu">
+        <h1>MENU</h1>
+        <div class="buttons">
+            <button><a href="cadastrar-usuario.html">Cadastrar Usuário</a></button>
+            <button><a href="cadastrar-fornecedor.html">Cadastrar Fornecedor</a></button>
+            <button><a href="cadastro-materiais.html">Cadastrar Material</a></button>
+            <button class="button-opcao-entrada" onclick="registrarEntrada()">Registrar Entrada</button>
+            <button class="button-opcao-saida" onclick="registrarSaida()">Registrar Saída</button>
+        </div>
+    </div>
+    <div class="registra-entrada-saida">
+        <div class="area-cadastro">
+            <h1>Registro de Entrada de Materiais</h1>
+            <form action="form-entrada-materiais">
+                <input id="ent-mat" type="text" class="cod-produto" placeholder="Código do Produto">
+                <input id="ent-mat" type="text" class="nome" placeholder="Nome do Produto">
+                <input id="ent-mat" type="text" class="medida" placeholder="Unidade: (ex: Kg)">
+                <input id="ent-mat" type="text" class="quantidade" placeholder="Quantidade">
+                <input id="ent-mat" type="text" class="valor-unitario" placeholder="Valor unitário">
+                <input id="ent-mat" type="text" class="data-entrada" placeholder="Data da entrada">
+                <input id="ent-mat" type="text" class="fornecedor" placeholder="Fornecedor">
+                
+            </form>
+            <div class="buttons-menu">
+                <button onclick="salvarEntradaMaterial()">Salvar</button>
+                <button onclick="limparEntrada()">Limpar</button>
+                <button class="voltar-menu"><a href="principal.html">Voltar ao Menu</a></button>
+            </div>
+        </div>
+
+        <div class="area-saida">
+            <h1>Registro de Saída de Materiais</h1>
+            <form action="form-saida-materiais">
+                <input id="saida-mat" type="text" class="saida-cod-produto" placeholder="Código do Produto">
+                <input id="saida-mat" type="text" class="saida-nome" placeholder="Nome do Produto">
+                <input id="saida-mat" type="text" class="saida-medida" placeholder="Unidade: (ex: Kg)">
+                <input id="saida-mat" type="text" class="saida-quantidade" placeholder="Quantidade">
+                <input id="saida-mat" type="text" class="saida-valor-unitario" placeholder="Valor unitário">
+                <input id="saida-mat" type="text" class="saida-data-entrada" placeholder="Data da entrada">
+                <input id="saida-mat" type="text" class="saida-fornecedor" placeholder="Fornecedor">
+                
+            </form>
+            <div class="buttons-menu">
+                <button onclick="salvarSaidaMaterial()">Salvar</button>
+                <button onclick="limparSaida()">Limpar</button>
+                <button class="voltar-menu"><a href="principal.html">Voltar ao Menu</a></button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="texto-msg">
+        <p>Página principal para teste</p> 
+    </div>
+    
+</body>
+
+</html>
