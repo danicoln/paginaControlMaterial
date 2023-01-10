@@ -25,8 +25,26 @@
             <button class="cadastrar" onclick="cadastrar()">Cadastrar</button>
         </form>
         <div class="menu-cadastro-usuario">
-            <button class="lista-usuarios">Listar Usuário</button>
-            <button class="voltar-menu"><a href="principal.html">Voltar ao Menu</a></button>
+            <button class="lista-usuarios" onclick="listarUsuario()">Listar Usuário</button>
+            <div class="table-users">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Nome</td>
+                            <td>Email</td>
+                            <td>Senha</td>
+                        </tr>
+                        <tbody id="table-body">
+                            <tr>
+                               
+                            </tr>
+                        </tbody>
+                    </thead>
+                </table>
+
+            </div>
+            <a href="principal.html"><button class="voltar-menu">Voltar ao Menu</button></a>
         </div>
     </div>
 

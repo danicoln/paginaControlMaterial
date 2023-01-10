@@ -4,7 +4,7 @@ const inpNome = document.querySelector(".nome");
 const inpEmail = document.querySelector(".email");
 const inpSenha = document.querySelector(".senha");
 
-document.querySelector('.lista-usuarios').style.display = "flex";
+document.querySelector('.table-users').style.display ="none";
 
 function cadastrar() {
     fetch("http://localhost:8080/users", {
@@ -23,6 +23,7 @@ function cadastrar() {
         .catch(function (res) { console.log(res) })
 
     alert("Usuario cadastrado com sucesso!")
+    recarregaPagina();
 };
 
 function limpar() {
@@ -36,49 +37,47 @@ formulario.addEventListener('submit', function (event) {
     limpar();
 });
 
+function recarregaPagina(){
+    window.location.reload();
+}
 
 /*================================================================================
 */
 
 /*Listar Usuarios */
 
+function btnListarUsers(){
+    
+    listarUsuario();
+}
+
 function listarUsuario(){
+    document.querySelector('.lista-usuarios').style.display ="none";
+    document.querySelector('.table-users').style.display ="flex";
+    const url = "http://localhost:8080/users";
 
-    document.querySelector('.lista-usuarios').style.display = "flex";
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
 
-    fetch("http://localhost:8080/users", {
-        headers: {
-            'Transfer-Encoding': 'chunked',
-            'Content-Type': 'application/json'
-        },
-        method: "GET",
-       body: "GET"
+       var tableBody = document.getElementById('table-body');
 
-    })
-        .then(function (res) { console.log(res) })
-        .catch(function (res) { console.log(res) })
+       for(var i = 0; i < data.length; i++){
 
-       listaTabela();
-};
+        var row = tableBody.insertRow();
+        var id = row.insertCell(0);
+        var nome = row.insertCell(1);
+        var email = row.insertCell(2);
+        var senha = row.insertCell(3);
 
+        id.innerHTML = data[i].id;     
+        nome.innerHTML = data[i].nome;
+        email.innerHTML = data[i].email;
+        senha.innerHTML = data[i].senha;
 
-    function listaTabela() {
+       }
+        });    
+    };
 
-        
-        let tbody = document.getElementById('tbody');
-
-        for (let i = 0; i < this.tbody.length; i++) {
-            let tr = tbody.insertRow(); 
-
-            let td_id = tr.insertCell(); 
-            let td_nome = tr.insertCell();
-            let td_email = tr.insertCell();
-            let td_senha = tr.insertCell();
-
-            td_id.innerText = this.tbody[i].id;
-            td_nome.innerText = this.tbody[i].nome;
-            td_email.innerText = this.tbody[i].email;
-            td_senha.innerText = this.tbody[i].senha;
-
-        }
-    }
+    
